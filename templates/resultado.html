@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles_resu.css') }}">
+    <title>Resultado da Conversão</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado da Conversão</h1>
+        <p>Valor original: {{ valor }} {{ moeda_origem }}</p> <!-- Exibe o valor original e a moeda de origem -->
+        <p>Taxa de câmbio: 1 {{ moeda_origem }} = {{ resultado / valor | round(4) }} {{ moeda_destino }}</p>
+        <p>Valor convertido: {{ resultado | round(2) }} {{ moeda_destino }}</p>
+        <br>
+        <a href="/">Voltar ao Conversor</a>  <!-- Link para voltar à página inicial do conversor -->
+    </div>
+</body>
+</html>
